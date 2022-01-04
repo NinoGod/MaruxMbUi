@@ -268,7 +268,8 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
     Label.BackgroundTransparency = 1.000
     Label.Position = UDim2.new(0, 0, 0.13333334, 0)
     Label.Size = UDim2.new(0, 432, 0, 26)
-    
+    Label.Text = txt
+
     LabelText.Name = "LabelText"
     LabelText.Parent = Label
     LabelText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -402,7 +403,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         click.ImageRectOffset = Vector2.new(564, 284)
         click.ImageRectSize = Vector2.new(36, 36)
         
-       local DropdownList = Instance.new("Frame")
+        local DropdownList = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")
         local TabButton = Instance.new("TextButton")
         local UIListLayout = Instance.new("UIListLayout")
@@ -433,7 +434,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         click.MouseButton1Click:Connect(function()
             if DropdownList.Visible == false then
                 DropdownList.Visible = true
-             click.Rotation = 360
+                click.Rotation = 360
             else
             DropdownList.Visible = false
             click.Rotation = 90
@@ -441,10 +442,18 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         end)
     
         local dropdown = {}
+        function dropdown:Clear()
+            for i,v in next, txt:GetChildren() do
+               if v.Name == txte then
+                  v:Destroy()
+               end
+            end
+        end
+
         function dropdown:Add(txt)
-            for i,v in next, txt do
-                local TabButton = Instance.new("TextButton")
-                 local UICorner_2 = Instance.new("UICorner")
+        for i,v in next, txt do
+        local TabButton = Instance.new("TextButton")
+        local UICorner_2 = Instance.new("UICorner")
         TabButton.Name = "TabButton"
         TabButton.Parent = DropdownList
         TabButton.BackgroundColor3 = Color3.fromRGB(186, 32, 84)
@@ -454,7 +463,6 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         TabButton.Text = v
         TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabButton.TextSize = 15.000
-        
         UICorner_2.CornerRadius = UDim.new(0, 5)
         UICorner_2.Parent = TabButton
         TabButton.MouseButton1Click:Connect(function()
@@ -499,7 +507,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         TextBox_2.Position = UDim2.new(0, 2, 0, 1)
         TextBox_2.Size = UDim2.new(0, 246, 0, 22)
         TextBox_2.Font = Enum.Font.SourceSansBold
-        TextBox_2.TextColor3 = Color3.fromRGB(116, 20, 51)
+        TextBox_2.TextColor3 = Color3.fromRGB(0,255,255)
         TextBox_2.TextSize = 14.000
         TextBox_2.Text = txt
         
@@ -581,7 +589,7 @@ SliderBox.Position = UDim2.new(0, 1, 0, 1)
 SliderBox.Size = UDim2.new(0, 19, 0, 10)
 SliderBox.Font = Enum.Font.SourceSansBold
 SliderBox.Text = ""
-SliderBox.TextColor3 = Color3.fromRGB(116, 20, 51)
+SliderBox.TextColor3 = Color3.fromRGB(0,255,255)
 SliderBox.TextScaled = true
 SliderBox.TextSize = 14.000
 SliderBox.TextWrapped = true
