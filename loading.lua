@@ -279,6 +279,9 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
     LabelText.Font = Enum.Font.SourceSansBold
     LabelText.TextColor3 = Color3.fromRGB(0,255,255)
     LabelText.TextSize = 15.000
+    function Label:Refresh(text)
+        Label.Text = text
+    end
     end
     
     function all:Toggle(txt,bol,togglecallback)
@@ -442,11 +445,11 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         end)
     
         local dropdown = {}
-        function dropdown:Clear()
+        function dropdown:Clear(list)
             for i,v in next, txt:GetChildren() do
-               if v.Name == txte then
-                  v:Destroy()
-               end
+                if v.Name == list then
+                    v:Destroy()
+                end
             end
         end
 
@@ -456,7 +459,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         local UICorner_2 = Instance.new("UICorner")
         TabButton.Name = "TabButton"
         TabButton.Parent = DropdownList
-        TabButton.BackgroundColor3 = Color3.fromRGB(186, 32, 84)
+        TabButton.BackgroundColor3 = Color3.fromRGB(0,255,255)
         TabButton.Position = UDim2.new(0.0920096859, 0, 0, 0)
         TabButton.Size = UDim2.new(0, 343, 0, 24)
         TabButton.Font = Enum.Font.SourceSansBold
