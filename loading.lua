@@ -1,10 +1,10 @@
-if game.CoreGui:FindFirstChild("UICopied") then
-    game.CoreGui:FindFirstChild("UICopied"):Destroy()
+if game.CoreGui:FindFirstChild("MaruxMbUi") then
+    game.CoreGui:FindFirstChild("MaruxMbUi"):Destroy()
 end
 
 function dragify(Frame)
 dragToggle = nil
-dragSpeed = .25 -- You can edit this.
+dragSpeed = .25
 dragInput = nil
 dragStart = nil
 dragPos = nil
@@ -47,7 +47,7 @@ local TweenService = game:GetService("TweenService")
 local library = {}
 
 function library:new(txt,desc)
-local UICopied = Instance.new("ScreenGui")
+local MaruxMbUi = Instance.new("ScreenGui")
 local Background = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TabList = Instance.new("Frame")
@@ -59,29 +59,29 @@ local Imagelogo = Instance.new("ImageButton")
 local Tabl = Instance.new("ScrollingFrame")
 local FrameAll = Instance.new("Folder")
 
-UICopied.Name = "UICopied"
-UICopied.Parent = game.CoreGui
-UICopied.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MaruxMbUi.Name = "MaruxMbUi"
+MaruxMbUi.Parent = game.CoreGui
+MaruxMbUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Background.Name = "Background"
-Background.Parent = UICopied
+Background.Parent = MaruxMbUi
 Background.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Background.Position = UDim2.new(0, 676, 0, 266)
 Background.Size = UDim2.new(0, 567, 0, 310)
 local toggledui = false
-		UserInputService.InputBegan:Connect(function(input)
-			pcall(function()
-				if input.KeyCode == Enum.KeyCode.RightControl then
-					if toggledui == false then
-						toggledui = true
-						UICopied.Enabled = false
-					else
-						toggledui = false
-						UICopied.Enabled = true
-					end
-				end
-			end)
-		end)
+UserInputService.InputBegan:Connect(function(input)
+    pcall(function()
+        if input.KeyCode == Enum.KeyCode.RightControl then
+            if toggledui == false then
+                toggledui = true
+                MaruxMbUi.Enabled = false
+            else
+                toggledui = false
+                MaruxMbUi.Enabled = true
+            end
+        end
+    end)
+end)
 		
 		
 dragify(Background)
@@ -136,7 +136,7 @@ Imagelogo.BackgroundTransparency = 1.000
 Imagelogo.Position = UDim2.new(0, 8, 0, 9)
 Imagelogo.Size = UDim2.new(0, 25, 0, 25)
 Imagelogo.ZIndex = 2
-Imagelogo.Image = "rbxassetid://8102245081" 
+Imagelogo.Image = "rbxassetid://8324568288" --เปลี่ยนรูป Logo ตรงนี้
 Imagelogo.ImageRectOffset = Vector2.new(50, 800)
 Imagelogo.ImageRectSize = Vector2.new(50, 50)
 
@@ -234,7 +234,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
     
     ButtonFrame.Name = "ButtonFrame"
     ButtonFrame.Parent = Button
-    ButtonFrame.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+    ButtonFrame.BackgroundColor3 = Color3.fromRGB(0,255,255)
     ButtonFrame.Position = UDim2.new(0, 81, 0, 6)
     ButtonFrame.Size = UDim2.new(0, 251, 0, 25)
     
@@ -276,7 +276,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
     LabelText.Position = UDim2.new(0.194444448, 0, 0.15625, 0)
     LabelText.Size = UDim2.new(0, 247, 0, 26)
     LabelText.Font = Enum.Font.SourceSansBold
-    LabelText.TextColor3 = Color3.fromRGB(153, 27, 69)
+    LabelText.TextColor3 = Color3.fromRGB(0,255,255)
     LabelText.TextSize = 15.000
     end
     
@@ -296,7 +296,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         
         ToggleFrame.Name = "ToggleFrame"
         ToggleFrame.Parent = Toggle
-        ToggleFrame.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+        ToggleFrame.BackgroundColor3 = Color3.fromRGB(0,255,255)
         ToggleFrame.Position = UDim2.new(0, 46, 0, 2)
         ToggleFrame.Size = UDim2.new(0, 27, 0, 26)
         
@@ -326,7 +326,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         ToggleText.Size = UDim2.new(0, 344, 0, 26)
         ToggleText.Font = Enum.Font.SourceSansBold
         ToggleText.Text = txt
-        ToggleText.TextColor3 = Color3.fromRGB(153, 27, 69)
+        ToggleText.TextColor3 = Color3.fromRGB(0,255,255)
         ToggleText.TextSize = 16.000
         ToggleText.TextXAlignment = Enum.TextXAlignment.Left
         check.MouseButton1Click:Connect(function()
@@ -353,7 +353,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         
         LineE.Name = "LineE"
         LineE.Parent = Line
-        LineE.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+        LineE.BackgroundColor3 = Color3.fromRGB(0,255,255)
         LineE.Position = UDim2.new(0.0370370373, 0, 0.375, 0)
         LineE.Size = UDim2.new(0, 408, 0, 3)
     end
@@ -372,7 +372,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         Dropdown.AutomaticSize = Enum.AutomaticSize.Y
         DropdownFrame.Name = "DropdownFrame"
         DropdownFrame.Parent = Dropdown
-        DropdownFrame.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+        DropdownFrame.BackgroundColor3 = Color3.fromRGB(0,255,255)
         DropdownFrame.Position = UDim2.new(0.0717592612, 0, 0.15625, 0)
         DropdownFrame.Size = UDim2.new(0, 361, 0, 23)
         
@@ -487,7 +487,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         
         TextBoxF.Name = "TextBoxF"
         TextBoxF.Parent = TextBox
-        TextBoxF.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+        TextBoxF.BackgroundColor3 = Color3.fromRGB(0,255,255)
         TextBoxF.Position = UDim2.new(0, 81, 0, 6)
         TextBoxF.Size = UDim2.new(0, 251, 0, 25)
         
@@ -561,13 +561,13 @@ TextSlider.Position = UDim2.new(0.0578703694, 0, 0.0625, 0)
 TextSlider.Size = UDim2.new(0, 223, 0, 14)
 TextSlider.Font = Enum.Font.SourceSansBold
 TextSlider.Text = txt
-TextSlider.TextColor3 = Color3.fromRGB(153, 27, 69)
+TextSlider.TextColor3 = Color3.fromRGB(0,255,255)
 TextSlider.TextSize = 14.000
 TextSlider.TextXAlignment = Enum.TextXAlignment.Left
 
 BoxFrmae.Name = "BoxFrmae"
 BoxFrmae.Parent = Slider
-BoxFrmae.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+BoxFrmae.BackgroundColor3 = Color3.fromRGB(0,255,255)
 BoxFrmae.Position = UDim2.new(0, 28, 0, 22)
 BoxFrmae.Size = UDim2.new(0, 22, 0, 12)
 
@@ -609,7 +609,7 @@ remove.Position = UDim2.new(0.164351851, 0, 0.5, 0)
 remove.Size = UDim2.new(0, 15, 0, 17)
 remove.ZIndex = 2
 remove.Image = "rbxassetid://3926307971"
-remove.ImageColor3 = Color3.fromRGB(153, 27, 69)
+remove.ImageColor3 = Color3.fromRGB(0,255,255)
 remove.ImageRectOffset = Vector2.new(884, 284)
 remove.ImageRectSize = Vector2.new(36, 36)
 
@@ -621,7 +621,7 @@ add.Position = UDim2.new(0.206018522, 0, 0.472972959, 0)
 add.Size = UDim2.new(0, 19, 0, 19)
 add.ZIndex = 2
 add.Image = "rbxassetid://3926307971"
-add.ImageColor3 = Color3.fromRGB(153, 27, 69)
+add.ImageColor3 = Color3.fromRGB(0,255,255)
 add.ImageRectOffset = Vector2.new(324, 364)
 add.ImageRectSize = Vector2.new(36, 36)
 
@@ -640,7 +640,7 @@ UICorner_3.Parent = sliderz
 
 SliderInner.Name = "SliderInner"
 SliderInner.Parent = sliderz
-SliderInner.BackgroundColor3 = Color3.fromRGB(153, 27, 69)
+SliderInner.BackgroundColor3 = Color3.fromRGB(0,255,255)
 SliderInner.Position = UDim2.new(0, 0, -0.400000006, 0)
 SliderInner.Size = UDim2.new(0, 296, 0, 6)
 
