@@ -597,7 +597,7 @@ rotation.Position = UDim2.new(0.129629627, 0, 0.581081092, 0)
 rotation.Size = UDim2.new(0, 12, 0, 12)
 rotation.ZIndex = 2
 rotation.Image = "rbxassetid://3926305904"
-rotation.ImageColor3 = Color3.fromRGB(181, 32, 81)
+rotation.ImageColor3 = Color3.fromRGB(0,255,255)
 rotation.ImageRectOffset = Vector2.new(244, 684)
 rotation.ImageRectSize = Vector2.new(36, 36)
 
