@@ -247,7 +247,7 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
     Buttontap.Position = UDim2.new(0, 2, 0, 1)
     Buttontap.Size = UDim2.new(0, 246, 0, 22)
     Buttontap.Font = Enum.Font.SourceSansBold
-    Buttontap.TextColor3 = Color3.fromRGB(156, 18, 62)
+    Buttontap.TextColor3 = Color3.fromRGB(255,255,255)
     Buttontap.TextSize = 15.000
     Buttontap.Text = txt
     
