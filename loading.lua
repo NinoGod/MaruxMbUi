@@ -279,9 +279,6 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
     LabelText.Font = Enum.Font.SourceSansBold
     LabelText.TextColor3 = Color3.fromRGB(0,255,255)
     LabelText.TextSize = 15.000
-    function Label:Refresh(text)
-        Label.Text = text
-    end
     end
     
     function all:Toggle(txt,bol,togglecallback)
@@ -445,9 +442,9 @@ UIPadding_2.PaddingTop = UDim.new(0, 7)
         end)
     
         local dropdown = {}
-        function dropdown:Clear(list)
-            for i,v in next, txt:GetChildren() do
-                if v.Name == list then
+        function dropdown:Clear(Name)
+            for i,v in next, list:GetChildren() do
+                if v.Name == Name then
                     v:Destroy()
                 end
             end
